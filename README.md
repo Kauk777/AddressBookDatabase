@@ -81,3 +81,9 @@ WHERE firstName='Paul' AND lastName='Fitzer';
 `SELECT city,COUNT(city) FROM address_book GROUP BY city;`
 
 `SELECT state,COUNT(state) FROM address_book GROUP BY state;`
+
+## UC8
+
+> Retrieve entries sorted alphabetically by person's name for given city
+
+`SELECT * FROM address_book WHERE city='New Delhi' ORDER BY firstName;`
