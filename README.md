@@ -46,3 +46,16 @@ INSERT INTO address_book VALUES
 > showing records
 
 `SELECT * FROM address_book;`
+
+## UC4
+
+> Editing exsisting contact by person name
+
+```
+UPDATE address_book SET 
+email='fitzer43@gamil.com', 
+city='Las vegas', 
+state='Nevada',
+zip=602301
+WHERE firstName='Paul' AND lastName='Fitzer';
+```
