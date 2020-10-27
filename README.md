@@ -115,3 +115,13 @@ type='Profession' WHERE firstName='Alzaria';
 > Number of contact by type
 
 `SELECT type,COUNT(type) FROM address_book GROUP BY type;`
+
+## UC11
+
+> Adding person contact to both friend and family
+
+```
+INSERT INTO address_book VALUES 
+('Sidh','Veneet','Kali Marg 41','Kolkata','West Bengal',704106,700160125,'veeentsdh@hotmail.com','Friends'),
+('Joshua','Bob','Mave Hill 205','Los Angels','California',501002,129875634,'paul77@gmail.com','Family');
+```
