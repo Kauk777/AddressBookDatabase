@@ -41,7 +41,8 @@ INSERT INTO address_book VALUES
  ('Paul','Fitzer','Mave Hill 205','Los Angels','California',501002,129875634,'paul77@gmail.com'),
  ('Sidh','Veneet','Kali Marg 41','Kolkata','West Bengal',704106,700160125,'veeentsdh@hotmail.com'),
  ('Vansikha','Rajput','South Delhi 54 street','New Delhi','Delhi',201456,987152634,'sikhavan@gamil.com'),
- ('Alzaria','Putossa','Fire Hill 4010','Queens','New York',101256,124578962,'putossa78@gmail.com');
+ ('Alzaria','Putossa','Fire Hill 4010','Queens','New York',101256,124578962,'putossa78@gmail.com'),
+ ('Aarav','Aryan','Peacock street 750','New Delhi','Delhi',201256,884578962,'aryan18@gmail.com');
 ```
 > showing records
 
@@ -66,3 +67,8 @@ WHERE firstName='Paul' AND lastName='Fitzer';
 
 `DELETE FROM address_book WHERE firstName='Sidh' AND lastName='Veneet';`
 
+## UC6
+
+> Retrieving records of person belonging to a city or state
+
+`SELECT * FROM address_book WHERE city='Las Vegas' OR state='Nevada';`
