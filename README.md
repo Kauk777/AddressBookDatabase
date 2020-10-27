@@ -87,3 +87,26 @@ WHERE firstName='Paul' AND lastName='Fitzer';
 > Retrieve entries sorted alphabetically by person's name for given city
 
 `SELECT * FROM address_book WHERE city='New Delhi' ORDER BY firstName;`
+
+## UC9
+
+> Adding type field in addressbook
+
+`ALTER TABLE address_book ADD type VARCHAR(20);'
+
+> Adding type values in record
+
+```
+UPDATE address_book SET 
+type='Friends' WHERE firstName IN('Paul','vansikha','Aarav');
+```
+
+```
+UPDATE address_book SET 
+type='Family' WHERE firstName='Hopiux';
+```
+```
+UPDATE address_book SET 
+type='Profession' WHERE firstName='Alzaria';
+```
+
