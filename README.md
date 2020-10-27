@@ -110,3 +110,8 @@ UPDATE address_book SET
 type='Profession' WHERE firstName='Alzaria';
 ```
 
+## UC10
+
+> Number of contact by type
+
+`SELECT type,COUNT(type) FROM address_book GROUP BY type;`
