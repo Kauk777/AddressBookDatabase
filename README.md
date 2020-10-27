@@ -42,7 +42,8 @@ INSERT INTO address_book VALUES
  ('Sidh','Veneet','Kali Marg 41','Kolkata','West Bengal',704106,700160125,'veeentsdh@hotmail.com'),
  ('Vansikha','Rajput','South Delhi 54 street','New Delhi','Delhi',201456,987152634,'sikhavan@gamil.com'),
  ('Alzaria','Putossa','Fire Hill 4010','Queens','New York',101256,124578962,'putossa78@gmail.com'),
- ('Aarav','Aryan','Peacock street 750','New Delhi','Delhi',201256,884578962,'aryan18@gmail.com');
+ ('Aarav','Aryan','Peacock street 750','New Delhi','Delhi',201256,884578962,'aryan18@gmail.com'),
+ ('Hopiux','Carla','Soft Corner Block','Virginia City','Nevada',304456,484566962,'carla@gmail.com');
 ```
 > showing records
 
@@ -72,3 +73,11 @@ WHERE firstName='Paul' AND lastName='Fitzer';
 > Retrieving records of person belonging to a city or state
 
 `SELECT * FROM address_book WHERE city='Las Vegas' OR state='Nevada';`
+
+## UC7
+
+> Size of addressbook by city or state
+
+`SELECT city,COUNT(city) FROM address_book GROUP BY city;`
+
+`SELECT state,COUNT(state) FROM address_book GROUP BY state;`
