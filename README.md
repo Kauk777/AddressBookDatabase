@@ -59,3 +59,10 @@ state='Nevada',
 zip=602301
 WHERE firstName='Paul' AND lastName='Fitzer';
 ```
+
+## UC5
+
+> Deleting contact by person name
+
+`DELETE FROM address_book WHERE firstName='Sidh' AND lastName='Veneet';`
+
