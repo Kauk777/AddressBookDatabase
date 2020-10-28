@@ -125,3 +125,92 @@ INSERT INTO address_book VALUES
 ('Sidh','Veneet','Kali Marg 41','Kolkata','West Bengal',704106,700160125,'veeentsdh@hotmail.com','Friends'),
 ('Joshua','Bob','Mave Hill 205','Los Angels','California',501002,129875634,'paul77@gmail.com','Family');
 ```
+
+## UC12
+
+> ER Model: Entity
+
+***Contact***
+
+```
+CREATE TABLE contacts 
+(
+ContactId  INT PRIMARY KEY,
+FirstName  VARCHAR(200) NOT NULL,
+LastName  VARCHAR(200) NOT NULL,
+Address   VARCHAR(200) NOT NULL,
+Zip       INT NOT NULL,
+FOREIGN KEY(Zip) REFERENCES zip_location(Zip)
+);
+```
+
+***ZipLocation***
+
+
+```
+CREATE TABLE zip_location 
+(
+Zip  INT NOT NULL PRIMARY KEY,
+City VARCHAR(200) NOT NULL,
+State VARCHAR(200) NOT NULL
+);
+```
+
+***phone***
+
+
+```
+CREATE TABLE phone_contact 
+(
+ContactId  INT,
+PhoneType  VARCHAR(200) NOT NULL,
+Number   VARCHAR(10) NOT NULL,
+PRIMARY KEY(ContactId,PhoneType,Number),
+FOREIGN KEY(ContactId) REFERENCES contacts(ContactId)
+);
+```
+
+***Email***
+
+
+```
+CREATE TABLE email_contact 
+(
+ContactId  INT,
+EmailType  VARCHAR(200) NOT NULL,
+Email    VARCHAR(200) NOT NULL,
+PRIMARY KEY(ContactId,EmailType,Email),
+FOREIGN KEY(ContactId) REFERENCES contacts(ContactId)
+);
+```
+
+***Type***
+
+```
+CREATE TABLE type 
+(
+ContactId  INT,
+Type  VARCHAR(150) NOT NULL,
+PRIMARY KEY(ContactId,Type),
+FOREIGN KEY(ContactId) REFERENCES contacts(ContactId)
+);
+```
+
+> Attributes: Composite
+
+***Zip***
+
+> Attributes: Multi-Valued
+
+***Phone***
+
+***Type***
+
+***Email***
+
+
+
+
+
+
+
